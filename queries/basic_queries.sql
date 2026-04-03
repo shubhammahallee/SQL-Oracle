@@ -35,3 +35,26 @@ select first_name,salary as orignal_salary ,(salary * 10) as Tax from employees;
 
 ---10. Find the result of (salary + 2000) * 1.1 for all employees and display it as "Adjusted Salary".
 select first_name,salary as orignal_salary ,(salary + 2000) * 1.1 as Adjusted_Salary from employees;
+
+---2) Part 2: Logical Operators
+---11.Retrieve employees who are working in the 'HR' department and have a salary greater than 60,000.
+select first_name,salary,department from EMPLOYEES
+where  department = 'HR' AND salary > 60000 ;
+
+---12.Display employees who are in the 'Finance' department or have a salary less than 50,000.
+select first_name,salary,department from EMPLOYEES
+where  department = 'Finance' AND salary < 50000 ;
+
+---13. Find employees who are not in the 'Marketing' department.
+SELECT first_name, department
+FROM employees
+WHERE department NOT IN ('Marketing');
+
+---14.Retrieve employees whose salary is greater than 70,000 and who joined after '2023-01-01'.
+select first_name,salary,department from EMPLOYEES
+where  hire_date > TO_DATE('2023-01-01','YYYY-MM-DD') AND salary  > 70000 ;
+
+---15. Find employees who work in the 'IT' department or 'Sales' department.
+select first_name,salary,department from EMPLOYEES
+where  department = 'IT' OR department = 'Sales';
+
