@@ -58,3 +58,23 @@ where  hire_date > TO_DATE('2023-01-01','YYYY-MM-DD') AND salary  > 70000 ;
 select first_name,salary,department from EMPLOYEES
 where  department = 'IT' OR department = 'Sales';
 
+---16.Retrieve employees whose department is not 'HR' and whose salary is not less than 50,000.
+select first_name,salary,department from EMPLOYEES
+where  department not in ('HR')  AND salary  < 50000 ;
+
+---17.Display employees who are not in the 'Finance' department and have a first name starting with 'A'.
+select first_name,salary,department from EMPLOYEES
+where  department not in ('Finance')  AND first_name LIKE '%A'; 
+
+---18. Find employees whose salary is greater than 60,000 and less than 80,000.
+select first_name,salary,department from EMPLOYEES
+where salary  > 60000  AND salary  < 80000 ;
+
+---19.Write a query to retrieve employees who joined in 2023 and are not in the 'Marketing' department.
+select first_name,salary,department,hire_date from EMPLOYEES
+where  department not in ('Marketing')  AND hire_date = TO_DATE('2023','YYYY'); 
+
+---20.Retrieve employees who are either in the 'HR' department or have a salary exactly equal to 60,000.
+select first_name,salary,department from EMPLOYEES
+where  department  in ('HR') or salary  = 60000; 
+
