@@ -1,8 +1,41 @@
-CREATE TABLE Product (
-    Product_ID INT PRIMARY KEY,
-    Product_Name VARCHAR2(200) NOT NULL,
-    Product_Type VARCHAR2(200) NOT NULL,
-    Price NUMBER(10,2) NOT NULL,
-    SellerName VARCHAR2(200) NOT NULL,
-    Manufacturer VARCHAR2(200) NOT NULL
-);
+
+-- Insert 30 test data into the Product table
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (1, 'Laptop', 'Electronics', 799.99, 'TechWorld', 'Dell');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (2, 'Smartphone', 'Electronics', 599.99, 'GadgetHub', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (3, 'Headphones', 'Accessories', 49.99, 'AudioStore', 'Sony');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (4, 'Monitor', 'Electronics', 129.99, 'TechWorld', 'LG');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (5, 'Keyboard', 'Accessories', 29.99, 'PCParts', 'Logitech');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (6, 'Mouse', 'Accessories', 19.99, 'PCParts', 'HP');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (7, 'Chair', 'Furniture', 149.99, 'HomeComfort', 'Logitech');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (8, 'Desk', 'Furniture', 199.99, 'OfficeStore', 'HP');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (9, 'Router', 'Electronics', 89.99, 'NetShop', 'TP-Link');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (10, 'Tablet', 'Electronics', 329.99, 'GadgetHub', 'Apple');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (11, 'Smartwatch', 'Electronics', 199.99, 'TechWorld', 'Logitech');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (12, 'Printer', 'Electronics', 99.99, 'OfficeEquip', 'HP');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (13, 'Speakers', 'Accessories', 59.99, 'AudioStore', 'Bose');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (14, 'External Hard Drive', 'Storage', 79.99, 'Bose', 'Seagate');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (15, 'USB Drive', 'Storage', 15.99, 'PCParts', 'SanDisk');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (16, 'Camera', 'Electronics', 499.99, 'PhotoGear', 'Bose');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (17, 'Webcam', 'Electronics', 39.99, 'TechWorld', 'Logitech');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (18, 'Graphics Card', 'Electronics', 299.99, 'PCParts', 'NVIDIA');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (19, 'Processor', 'Electronics', 219.99, 'PCParts', 'Intel');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (20, 'Motherboard', 'Electronics', 129.99, 'PCParts', 'ASUS');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (21, 'RAM', 'Electronics', 79.99, 'PCParts', 'Corsair');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (22, 'Power Supply', 'Electronics', 49.99, 'PCParts', 'Bose');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (23, 'Cables', 'Accessories', 9.99, 'PCParts', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (24, 'Surge Protector', 'Accessories', 24.99, 'TechWorld', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (25, 'Fan', 'Accessories', 14.99, 'HomeComfort', 'Dyson');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (26, 'AC Unit', 'Appliances', 249.99, 'HomeAppliances', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (27, 'Water Purifier', 'Appliances', 129.99, 'HomeAppliances', 'Kent');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (28, 'Microwave', 'Appliances', 199.99, 'KitchenStore', 'LG');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (29, 'Refrigerator', 'Appliances', 599.99, 'HomeAppliances', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) VALUES (30, 'Washing Machine', 'Appliances', 399.99, 'HomeAppliances', 'Bosch');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) 
+VALUES (31, 'Pendrive', 'Storage', 99.99, 'PCParts', 'Samsung');
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) 
+VALUES (32, 'SSD', 'Electronics', 99.99, 'PCParts', 'Samsung');
+
+INSERT INTO Product (Product_ID, Product_Name, Product_Type, Price, SellerName, Manufacturer) 
+VALUES (33, 'HDD', 'Electronics', 49.99, 'PCParts', 'Samsung');
+
+COMMIT;
