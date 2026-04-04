@@ -78,3 +78,24 @@ where  department not in ('Marketing')  AND hire_date = TO_DATE('2023','YYYY');
 select first_name,salary,department from EMPLOYEES
 where  department  in ('HR') or salary  = 60000; 
 
+---3) Part 3: Comparison Operators
+---21.Display employees with a salary equal to 75,000.
+select first_name,salary,department from EMPLOYEES
+where  salary  = 75000;
+
+---22.Retrieve employees with a salary not equal to 50,000.
+select first_name,salary,department from EMPLOYEES
+where  salary  <> 50000;
+
+---23. Find employees who joined before '2023-05-01'.
+select first_name,salary,department,hire_date from EMPLOYEES
+where hire_date < TO_DATE('2023-05-01','YYYY-MM-DD'); 
+
+---24.Write a query to retrieve employees whose salary is greater than 80,000.
+select first_name,salary,department from EMPLOYEES
+where  salary > 80000;
+
+---25.Retrieve employees whose salary is less than 60,000.
+select first_name,salary,department from EMPLOYEES
+where  salary < 60000;
+
