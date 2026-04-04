@@ -99,3 +99,22 @@ where  salary > 80000;
 select first_name,salary,department from EMPLOYEES
 where  salary < 60000;
 
+---26.Display employees whose salary is greater than or equal to 70,000.
+select first_name,salary,department from EMPLOYEES
+where  salary >= 70000;
+
+---27.Retrieve employees whose salary is less than or equal to 65,000.
+select first_name,salary,department from EMPLOYEES
+where  salary <= 65000;
+
+---28. Find employees who joined after '2023-06-01' but before '2023-12-01'.
+select first_name,salary,department,hire_date from EMPLOYEES
+where hire_date > TO_DATE('2023-06-01','YYYY-MM-DD')AND hire_date < TO_DATE('2023-12-01','YYYY-MM-DD');
+
+---29.Display employees with a salary between 55,000 and 75,000 (inclusive).
+select first_name,salary,department from EMPLOYEES
+where  salary  BETWEEN 55000 and 75000 ;
+
+---30.Retrieve employees whose salary is either less than 40,000 or greater than 90,000.
+select first_name,salary,department from EMPLOYEES
+WHERE salary < 40000 OR salary > 90000;
