@@ -1,1 +1,16 @@
+---Basic Aggregate Functions
+---1. Find the total count of distinct manufacturers in the table.
+SELECT distinct manufacturer from Product;
+
+---2. Calculate the total price of all products where the Product_Type is 'Furniture'.
+select sum(price) from PRODUCT where Product_Type ='Furniture';
+
+---3. Find the average price of all products whose SellerName is 'TechWorld'.
+select AVG(price) from PRODUCT where SellerName = 'TechWorld';
+
+---4. Determine the maximum price of products sold by 'AudioStore'.
+select max(price) from PRODUCT where SellerName = 'AudioStore';
+
+---5. Find the minimum price of any product in the Appliances category.
+select min(price) from PRODUCT where Product_Type ='Appliances';
 
