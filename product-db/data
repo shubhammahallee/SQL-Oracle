@@ -1,1 +1,8 @@
-
+CREATE TABLE Product (
+    Product_ID INT PRIMARY KEY,
+    Product_Name VARCHAR2(200) NOT NULL,
+    Product_Type VARCHAR2(200) NOT NULL,
+    Price NUMBER(10,2) NOT NULL,
+    SellerName VARCHAR2(200) NOT NULL,
+    Manufacturer VARCHAR2(200) NOT NULL
+);
