@@ -118,3 +118,18 @@ SELECT * FROM product where Manufacturer = 'Samsung' ORDER by SellerName ASC;
 
 ---35. List all products with a Price greater than 100 and sort by Price in descending order.
 SELECT * FROM product where Price > 100 ORDER by Price DESC;
+
+---36.Retrieve all products and sort by Manufacturer, then by Product_Name within each manufacturer.
+SELECT * FROM product  ORDER by Manufacturer,Product_Name ;
+
+---37.Display all products where the Product_Type is 'Electronics' and order by Price in ascending order.
+SELECT * FROM product where Product_Type = 'Electronics' ORDER by Price asc;
+
+---38.Retrieve all products where the SellerName contains 'Home' and sort by Product_Type in descending order.
+SELECT * FROM product where SellerName = 'Home' ORDER by Product_Type desc;
+
+---39. List all products and sort by Manufacturer in ascending order, then by Price in descending order.
+SELECT * FROM product ORDER by  Manufacturer asc, Price desc;
+
+---40.Retrieve all products and sort by SellerName, Manufacturer, and Price.
+SELECT * FROM product ORDER by SellerName, Manufacturer, Price;
