@@ -87,3 +87,19 @@ select SellerName,avg(price) as avg_price from product where SellerName LIKE '%T
 
 ---25. Find the total number of products and their sum of prices where the Manufacturer is not 'Samsung'.
 select Manufacturer,sum(price) as avg_price from product where Manufacturer <> 'Samsung' GROUP by Manufacturer;
+
+---26. Find the maximum price among products where the Product_Type is not 'Accessories'.
+select Product_Type,max(price) as max_price from product where Product_Type <> 'Accessories' GROUP by Product_Type;
+
+---27.Count how many products are sold by 'PC Parts' where the price is greater than the average price of all products.
+select Product_Type,count(Product_ID) as total_count from product where Product_Type <> 'PC Parts' GROUP by Product_Type;
+
+---28.Calculate the sum of prices for products grouped by Manufacturer where the total price exceeds 500.
+SELECT Manufacturer, SUM(price) AS total_price FROM product GROUP BY Manufacturer HAVING SUM(price) > 500;
+
+---29.Determine the maximum and minimum price of products grouped by SellerName where the Product_Type is 'Storage'.
+select SellerName,max(price)as max_price,min(price) as min_price from product where Product_Type  = 'Storage' group by SellerName;
+
+---30.Count the number of products whose price is between 50 and 500 and group them by Product_Type.
+SELECT price,Product_Type,count(Product_ID) as count_product FROM product where price between 50 AND 500 GROUP BY Product_Type,price;
+
