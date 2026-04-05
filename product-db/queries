@@ -28,3 +28,24 @@ select min(price) from PRODUCT where Product_Type LIKE'S%';
 
 ---10.Calculate the total price of all products sold by sellers whose name ends with 'Store'.
 select sum(price) from PRODUCT where SellerName LIKE'%Store';
+
+---Group By with Aggregate Functions
+---11. Find the total price of products grouped by Manufacturer.
+select Manufacturer,sum(price) from PRODUCT GROUP BY Manufacturer;
+
+---12.Calculate the average price of products grouped by SellerName.
+select SellerName,avg(price) from PRODUCT GROUP BY SellerName;
+
+---13.Retrieve the maximum price of products grouped by Product_Type.
+select Product_Type,max(price) from PRODUCT GROUP BY Product_Type;
+
+---14.Count the total number of products grouped by Product_Type and Manufacturer.
+select Manufacturer,Product_Type,count(Product_ID) from PRODUCT GROUP BY Product_Type,Manufacturer;
+
+---15.Determine the minimum price of products grouped by Product_Type where Manufacturer is 'Samsung'.
+SELECT Manufacturer,
+       Product_Type,
+       MIN(price) AS min_price
+FROM product
+WHERE Manufacturer = 'Samsung'
+GROUP BY Manufacturer, Product_Type;
