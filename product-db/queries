@@ -49,3 +49,23 @@ SELECT Manufacturer,
 FROM product
 WHERE Manufacturer = 'Samsung'
 GROUP BY Manufacturer, Product_Type;
+
+---16. Find the total number of products and their sum of prices grouped by SellerName.
+select SellerName,COUNT(Product_ID) AS total_products,
+       SUM(price) AS total_price FROM product group by SellerName;
+
+---17.Calculate the average and total price of products grouped by Product_Type and SellerName.
+select Product_Type,SellerName,avg(price) AS average_price,
+       SUM(price) AS total_price FROM product group by SellerName,Product_Type;
+
+---18. Find the maximum and minimum price of products grouped by Manufacturer.
+select Manufacturer,min(price) AS min_price,
+       max(price) AS max_price FROM product group by Manufacturer;
+
+---19.Count the number of products for each Manufacturer where the price is greater than 100. 
+select Manufacturer,price,COUNT(Product_ID) AS total_products
+        FROM product where price > 100 group by Manufacturer,price;
+
+---20.Calculate the average price of products grouped by Product_Type where SellerName contains 'Home'.
+select Product_Type,SellerName,avg(price) AS average_price
+FROM product where SellerName LIKE '%Home%' group by SellerName,Product_Type;
