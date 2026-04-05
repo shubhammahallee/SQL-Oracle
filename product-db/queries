@@ -14,3 +14,17 @@ select max(price) from PRODUCT where SellerName = 'AudioStore';
 ---5. Find the minimum price of any product in the Appliances category.
 select min(price) from PRODUCT where Product_Type ='Appliances';
 
+---6. Calculate the average price of products where the Manufacturer is 'HP'.
+select AVG(price) from PRODUCT where manufacturer = 'HP';
+
+---7. Count how many products are sold by 'GadgetHub'.
+select count(Product_ID) from PRODUCT where SellerName ='GadgetHub';
+
+---8. Find the total price of all products with the Product_Name containing 'Drive'.
+select sum(price) from PRODUCT where Product_Name LIKE'%Drive%';
+
+---9. Determine the minimum price among products that start with 'S' in Product_Type.
+select min(price) from PRODUCT where Product_Type LIKE'S%';
+
+---10.Calculate the total price of all products sold by sellers whose name ends with 'Store'.
+select sum(price) from PRODUCT where SellerName LIKE'%Store';
