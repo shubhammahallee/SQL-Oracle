@@ -103,3 +103,18 @@ select SellerName,max(price)as max_price,min(price) as min_price from product wh
 ---30.Count the number of products whose price is between 50 and 500 and group them by Product_Type.
 SELECT price,Product_Type,count(Product_ID) as count_product FROM product where price between 50 AND 500 GROUP BY Product_Type,price;
 
+---ORDER BY Clause (Sorting Data)
+---31.Retrieve all products and order them by Price in ascending order.
+select Product_ID,Product_Name,price from product ORDER by price ASC;
+
+---32.Display all products and sort them by Product_Name in descending order.
+select * from product ORDER by Product_Name DESC;
+
+---33.Retrieve all products and order them by Product_Type, then by Price within each type.
+SELECT * FROM product ORDER BY Product_Type, Price;
+
+---34.Display all products where the Manufacturer is 'Samsung' and sort by SellerName in ascending order.
+SELECT * FROM product where Manufacturer = 'Samsung' ORDER by SellerName ASC;
+
+---35. List all products with a Price greater than 100 and sort by Price in descending order.
+SELECT * FROM product where Price > 100 ORDER by Price DESC;
