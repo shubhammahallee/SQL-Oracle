@@ -69,3 +69,21 @@ select Manufacturer,price,COUNT(Product_ID) AS total_products
 ---20.Calculate the average price of products grouped by Product_Type where SellerName contains 'Home'.
 select Product_Type,SellerName,avg(price) AS average_price
 FROM product where SellerName LIKE '%Home%' group by SellerName,Product_Type;
+
+---Using Conditions with Aggregate Functions
+---21. Find the total price of all products where the price is greater than the average price of all products.
+SELECT SUM(price) AS total_price FROM product
+HAVING SUM(price) > (SELECT AVG(price) FROM product);
+
+---22.Count how many products have a price less than the maximum price in the Electronics category.
+SELECT COUNT(Product_ID) AS total_products FROM product
+where price < (SELECT max(price) FROM product where Product_Type = 'Electronics');
+
+---23.Determine the sum of prices for products where the Product_Name starts with 'M'.
+select Product_Name,sum(price) as total_price from product where Product_Name LIKE 'M%' GROUP by Product_Name;
+
+---24.Calculate the average price of products sold by sellers whose name contains 'Tech'.
+select SellerName,avg(price) as avg_price from product where SellerName LIKE '%Tech%' GROUP by SellerName;
+
+---25. Find the total number of products and their sum of prices where the Manufacturer is not 'Samsung'.
+select Manufacturer,sum(price) as avg_price from product where Manufacturer <> 'Samsung' GROUP by Manufacturer;
