@@ -1,1 +1,29 @@
+-- ============================================
+-- INSERT SAMPLE DATA INTO CUSTOMERS TABLE
+-- ============================================
+-- Columns: (customer_id, customer_name, city, age, total_purchase)
 
+INSERT INTO Customers VALUES (1, 'John Doe', 'New York', 35, 2500.50);
+INSERT INTO Customers VALUES (2, 'Jane Smith', 'Los Angeles', 28, 1800.00);
+INSERT INTO Customers VALUES (3, 'Mike Brown', 'Chicago', 45, 3000.75);
+INSERT INTO Customers VALUES (4, 'Emily Davis', 'San Francisco', 22, 1200.00);
+INSERT INTO Customers VALUES (5, 'Chris Wilson', 'New York', 38, 4000.25);
+INSERT INTO Customers VALUES (6, 'Sophia Taylor', 'Seattle', 29, 2200.00);
+INSERT INTO Customers VALUES (7, 'Daniel Harris', 'Los Angeles', 50, 5000.00);
+INSERT INTO Customers VALUES (8, 'Olivia Martinez', 'Miami', 32, 3500.00);
+COMMIT;
+
+
+-- ============================================
+-- INSERT SAMPLE DATA INTO ORDERS TABLE
+-- ============================================
+-- Columns: (order_id, customer_id, order_date, order_amount, status)
+
+INSERT INTO Orders VALUES (1, 1, TO_DATE('2024-01-10', 'YYYY-MM-DD'), 500.00, 'Shipped');
+INSERT INTO Orders VALUES (2, 2, TO_DATE('2024-01-12', 'YYYY-MM-DD'), 1200.00, 'Delivered');
+INSERT INTO Orders VALUES (3, 3, TO_DATE('2024-01-15', 'YYYY-MM-DD'), 750.00, 'Shipped');
+INSERT INTO Orders VALUES (4, 4, TO_DATE('2024-01-20', 'YYYY-MM-DD'), 300.00, 'Cancelled');
+INSERT INTO Orders VALUES (5, Null, TO_DATE('2024-01-25', 'YYYY-MM-DD'), 2500.00, 'Delivered');
+INSERT INTO Orders VALUES (6, 6, TO_DATE('2024-01-28', 'YYYY-MM-DD'), 700.00, 'Processing');
+INSERT INTO Orders VALUES (7, 7, TO_DATE('2024-01-30', 'YYYY-MM-DD'), 1000.00, 'Delivered');
+COMMIT;
