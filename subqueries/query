@@ -18,3 +18,18 @@ SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM orders WHE
 ---5.Find the orders where the amount is greater than the total purchase of customer_id = 5.
 SELECT * FROM orders WHERE order_amount > (SELECT total_purchase FROM customers WHERE customer_id = 5);
 
+---Subqueries with Operators
+---6.Retrieve customers whose age is greater than the average age of all customers.
+select * from CUSTOMERS where age >(SELECT avg(Age) FROM Customers);
+
+---7.Find orders where the amount is greater than the average order amount.
+select * from Orders where Order_Amount >(SELECT avg(Order_Amount) FROM Orders);
+
+---8.Get customers who have placed more than one order.
+SELECT Customer_ID FROM Orders GROUP BY Customer_ID HAVING COUNT(*) > 1;
+
+---9.Retrieve orders placed by customers from 'New York'.
+SELECT *  FROM Orders WHERE Customer_ID IN (SELECT Customer_ID  FROM Customers  WHERE City = 'New York');
+
+---10.Find orders placed in the last 30 days using a subquery.
+SELECT *  FROM Orders WHERE Order_Date >= (SELECT SYSDATE - 30 FROM dual);
