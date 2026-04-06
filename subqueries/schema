@@ -1,0 +1,46 @@
+-- ============================================
+-- CUSTOMERS TABLE
+-- ============================================
+-- Stores basic customer information and their total purchase value
+
+CREATE TABLE Customers (
+    Customer_ID INT PRIMARY KEY, 
+    -- Unique ID for each customer (Primary Key)
+
+    Customer_Name VARCHAR2(100) NOT NULL, 
+    -- Customer full name (cannot be NULL)
+
+    City VARCHAR2(100), 
+    -- City where customer lives
+
+    Age INT, 
+    -- Customer age
+
+    Total_Purchase NUMBER(10, 2) 
+    -- Total amount spent by customer (precision: 10 digits, 2 decimal)
+);
+
+
+
+
+-- ============================================
+-- ORDERS TABLE
+-- ============================================
+-- Stores order details placed by customers
+
+CREATE TABLE Orders (
+    Order_ID INT PRIMARY KEY, 
+    -- Unique ID for each order (Primary Key)
+
+    Customer_ID INT REFERENCES Customers(Customer_ID), 
+    -- Foreign Key → links order to a customer
+
+    Order_Date DATE, 
+    -- Date when order was placed
+
+    Order_Amount NUMBER(10, 2), 
+    -- Amount of the order
+
+    Status VARCHAR2(50) 
+    -- Order status (e.g., Shipped, Delivered, Cancelled, Processing)
+);
