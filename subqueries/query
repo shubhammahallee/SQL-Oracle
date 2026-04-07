@@ -51,3 +51,19 @@ SELECT SUM(Order_Amount) AS Total_Amount FROM Orders WHERE Customer_ID IN (SELEC
 
 ---Retrieve the minimum order amount for each status.
 SELECT Status, MIN(Order_Amount) AS Min_Amount FROM Orders GROUP BY Status;
+
+---Correlated Subqueries
+---Retrieve customers who have placed at least one order with an amount greater than their total purchase.
+SELECT *
+FROM Customers c
+WHERE EXISTS (
+    SELECT 1
+    FROM Orders o
+    WHERE o.Customer_ID = c.Customer_ID
+    AND o.Order_Amount > (
+        SELECT AVG(o2.Order_Amount)
+        FROM Orders o2
+        WHERE o2.Customer_ID = c.Customer_ID
+    )
+);
+
