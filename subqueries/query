@@ -33,3 +33,21 @@ SELECT *  FROM Orders WHERE Customer_ID IN (SELECT Customer_ID  FROM Customers  
 
 ---10.Find orders placed in the last 30 days using a subquery.
 SELECT *  FROM Orders WHERE Order_Date >= (SELECT SYSDATE - 30 FROM dual);
+
+---Subqueries with Aggregate Functions
+---Find the maximum order amount placed by customers.
+SELECT * FROM orders WHERE order_amount = (SELECT MAX(order_amount) FROM orders);
+
+---Retrieve the customer who has the highest total purchase.
+SELECT * FROM Customers WHERE Total_Purchase = (SELECT MAX(Total_Purchase) FROM Customers);
+
+---Get the average order amount for each customer.
+SELECT * FROM orders WHERE order_amount = (SELECT avg(order_amount) FROM orders);
+
+SELECT customer_id, AVG(order_amount) AS avg_order_amount FROM orders GROUP BY customer_id;
+
+---Find the total amount of orders placed by customers aged above 40.
+SELECT SUM(Order_Amount) AS Total_Amount FROM Orders WHERE Customer_ID IN (SELECT Customer_ID FROM Customers WHERE Age > 40);
+
+---Retrieve the minimum order amount for each status.
+SELECT Status, MIN(Order_Amount) AS Min_Amount FROM Orders GROUP BY Status;
