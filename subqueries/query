@@ -51,6 +51,36 @@ SELECT SUM(Order_Amount) AS Total_Amount FROM Orders WHERE Customer_ID IN (SELEC
 
 ---Retrieve the minimum order amount for each status.
 SELECT Status, MIN(Order_Amount) AS Min_Amount FROM Orders GROUP BY Status;
+============================================================================================
+---Subqueries with Clauses
+---Find customers who placed orders on the same date as Order_ID = 2..
+select CUSTOMER_ID,order_date from ORDERS where Order_Date = (select order_date from ORDERS where Order_ID = 2);
+
+---Retrieve orders where the amount is greater than the maximum amount of a 'Cancelled' order.
+
+
+---Get customers who have placed orders with an amount greater than 1000.
+(select * from orders where Order_Amount > 1000);
+
+---Retrieve the names of customers who have not placed an order with a status other than 'Shipped'.
+SELECT CUSTOMER_ID 
+FROM CUSTOMERS 
+WHERE CUSTOMER_ID NOT IN (
+    SELECT CUSTOMER_ID  
+    FROM ORDERS 
+    WHERE Status <> 'Shipped'
+);
+
+---Find customers who have placed orders where the order date is earlier than January 15, 2024.
+SELECT CUSTOMER_NAME,CUSTOMER_ID
+FROM Customers
+WHERE CUSTOMER_ID IN (
+    SELECT CUSTOMER_ID,Order_Date
+    FROM Orders
+    WHERE Order_Date < TO_DATE('15-01-2024','DD-MM-YYYY')
+    group by CUSTOMER_NAME,CUSTOMER_ID,Order_Date
+);
+==================================================================================================
 
 ---Correlated Subqueries
 ---Retrieve customers who have placed at least one order with an amount greater than their total purchase.
