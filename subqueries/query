@@ -175,4 +175,28 @@ WHERE Customer_ID IN (
     HAVING COUNT(*) > 3
 );
 
+-- 11. Retrieve the maximum order amount for each status grouped by customer city.
+SELECT customers.city, orders.status, MAX(Order_Amount) AS MAX_ORDER
+FROM orders
+JOIN CUSTOMERS 
+ON CUSTOMERS.CUSTOMER_ID = orders.CUSTOMER_ID
+GROUP BY customers.city, orders.status;
 
+-- 12. Get the total purchase of customers who have placed an order with an amount greater than 2000.
+ SELECT Customer_Name, Total_Purchase
+FROM Customers
+WHERE Customer_ID IN (
+    SELECT Customer_ID
+    FROM Orders
+    WHERE Order_Amount > 2000
+);
+
+-- 13. Retrieve orders placed by customers who have the highest total purchase.
+(select max(total_purchase)as highest_purchase from customers);
+
+
+-- 14. Find customers who have placed orders with a status of 'Processing' and an amount greater than the average order amount.
+select CUSTOMER_ID from orders where status = 'Processing';
+
+-- 15. Retrieve the names of customers whose total purchase is greater than the sum of all 'Cancelled' orders.
+select customer_ID from ORDERS where status = 'Cancelled';
