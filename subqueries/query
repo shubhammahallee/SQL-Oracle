@@ -145,3 +145,34 @@ WHERE o.Order_Amount > (
     WHERE Status = 'Cancelled'
 );
 
+-- 8. Get customers who have placed an order with a status of 'Delivered' and whose total purchase is greater than 3000.
+SELECT ORDER_ID, CUSTOMER_ID, Status
+FROM Orders
+WHERE Status = 'Delivered'
+AND Customer_ID IN (
+    SELECT Customer_ID
+    FROM Customers
+    WHERE total_purchase > 3000
+);
+
+-- 9. Find the number of orders placed by customers who are from 'Chicago'.
+SELECT COUNT(*) AS total_orders
+FROM Orders
+WHERE Customer_ID IN (
+    SELECT Customer_ID
+    FROM Customers
+    WHERE City = 'Chicago'
+);
+
+
+-- 10. Find the average order amount for customers who have placed more than 3 orders.
+SELECT AVG(Order_Amount)
+FROM Orders
+WHERE Customer_ID IN (
+    SELECT Customer_ID
+    FROM Orders
+    GROUP BY Customer_ID
+    HAVING COUNT(*) > 3
+);
+
+
