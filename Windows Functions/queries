@@ -1,1 +1,21 @@
+---Assignment Questions
+---ROWID
+---1. Retrieve the ROWID for all rows in the Countries table.
+select ROWID from Countries;
 
+---2. Find the ROWID for the row where the Country_Name is 'India'.
+select ROWID from Countries WHERE Country_Name ='India';
+
+---3. Delete a row from the Cities table using its ROWID.
+DELETE FROM Cities WHERE ROWID = 'AALxHjAABAAMsHPAAA';
+
+---4. Retrieve all distinct ROWID values for the States table.
+SELECT DISTINCT ROWID FROM States;
+
+---5. Identify rows in the Cities table with the same ROWID.
+SELECT ROWID, COUNT(*)
+FROM Cities
+GROUP BY ROWID
+HAVING COUNT(*) > 1;
+
+========================================================================
