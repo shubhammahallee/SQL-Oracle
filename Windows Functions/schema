@@ -1,1 +1,21 @@
+-- Create Countries Table
+CREATE TABLE Countries (
+    Country_ID INT PRIMARY KEY,
+    Country_Name VARCHAR2(100) NOT NULL,
+    Region VARCHAR2(100)
+);
 
+-- Create States Table
+CREATE TABLE States (
+    State_ID INT PRIMARY KEY,
+    State_Name VARCHAR2(100) NOT NULL,
+    Country_ID INT REFERENCES Countries(Country_ID) ON DELETE CASCADE
+);
+
+-- Create Cities Table
+CREATE TABLE Cities (
+    City_ID INT PRIMARY KEY,
+    City_Name VARCHAR2(100) NOT NULL,
+    State_ID INT REFERENCES States(State_ID),
+    Population INT
+);
