@@ -1,1 +1,34 @@
+-- Populate Countries Table
+INSERT INTO Countries VALUES (1, 'India', 'South Asia');
+INSERT INTO Countries VALUES (2, 'United States', 'North America');
+INSERT INTO Countries VALUES (3, 'Australia', 'Oceania');
+INSERT INTO Countries VALUES (4, 'United Kingdom', 'Europe');
+INSERT INTO Countries VALUES (5, 'Canada', 'North America');
 
+-- Add countries without states
+INSERT INTO Countries VALUES (6, 'Maldives', 'South Asia');
+INSERT INTO Countries VALUES (7, 'Bhutan', 'South Asia');
+
+-- Populate States Table
+INSERT INTO States VALUES (1, 'Maharashtra', 1);
+INSERT INTO States VALUES (2, 'Karnataka', 1);
+INSERT INTO States VALUES (3, 'California', 2);
+INSERT INTO States VALUES (4, 'New York', 2);
+INSERT INTO States VALUES (5, 'Ontario', 5);
+INSERT INTO States VALUES (6, 'Test', null);
+
+-- Add states without cities
+INSERT INTO States VALUES (6, 'Telangana', 1);
+INSERT INTO States VALUES (7, 'Victoria', 3);
+
+-- Populate Cities Table
+INSERT INTO Cities VALUES (1, 'Mumbai', 1, 20400000);
+INSERT INTO Cities VALUES (2, 'Pune', 1, 7200000);
+INSERT INTO Cities VALUES (3, 'Bangalore', 2, 13000000);
+INSERT INTO Cities VALUES (4, 'San Francisco', 3, 870000);
+INSERT INTO Cities VALUES (5, 'Toronto', 5, 2900000);
+
+INSERT INTO Cities VALUES (6, 'Hamilton', NULL, 75000);
+INSERT INTO Cities VALUES (7, 'Male', NULL, 133000);
+
+COMMIT;
