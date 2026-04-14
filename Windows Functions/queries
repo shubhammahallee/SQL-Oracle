@@ -19,3 +19,56 @@ GROUP BY ROWID
 HAVING COUNT(*) > 1;
 
 ========================================================================
+---ROWNUM
+---6. Retrieve the top 3 rows from the Cities table based on population.
+SELECT * FROM (
+    SELECT c.*, ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn
+    FROM Cities c
+)
+WHERE rn <= 3;
+
+---7. Find the second and third most populous cities using ROWNUM.
+SELECT * FROM (
+    SELECT city_name, population, ROWNUM AS rn
+    FROM (
+        SELECT city_name, population
+        FROM Cities
+        ORDER BY Population DESC
+    )
+    WHERE ROWNUM <= 3         
+)
+WHERE rn >= 2; 
+
+SELECT * FROM (
+    SELECT city_name, population,
+           ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn
+    FROM Cities
+)
+WHERE rn IN (2, 3);
+
+---8. Display all cities with ROWNUM less than 5 and population greater than 1 million.
+select * from (
+    SELECT city_name, population, ROWNUM AS rn FROM (
+        SELECT city_name, population
+        FROM Cities
+        ORDER BY Population DESC
+    )
+    WHERE ROWNUM < 5
+    ) 
+    where population > 1000000;
+
+---9. Retrieve the last row in the Countries table using ROWNUM.
+SELECT * FROM (
+    SELECT c.*,
+           ROW_NUMBER() OVER (ORDER BY ROWID DESC) AS rn
+    FROM Countries c
+)
+WHERE rn = 1;
+
+---10.Display the first 5 states in alphabetical order using ROWNUM.
+SELECT * FROM (
+    SELECT s.*,
+           ROW_NUMBER() OVER (ORDER BY State_Name ASC) AS rn
+    FROM States s
+)
+WHERE rn <= 5;
