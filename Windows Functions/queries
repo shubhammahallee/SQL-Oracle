@@ -73,6 +73,7 @@ SELECT * FROM (
 )
 WHERE rn <= 5;
 =================================================================================================
+
 ---RANK and DENSE_RANK
 ---11.Rank cities based on their population in descending order.
 SELECT population,
@@ -87,13 +88,29 @@ FROM Cities
 GROUP BY State_ID;
 
 ---13.Retrieve the state with the second-highest population city using RANK.
-select * from ( population,
-RANK() OVER (ORDER BY population DESC) AS rnk
-FROM Cities;   
-)where rnk in (2);
+SELECT *
+FROM (
+    SELECT population,
+           DENSE_RANK() OVER (ORDER BY population DESC) AS rnk
+    FROM Cities
+)
+WHERE rnk = 2;
 
 ---14.Assign ranks to countries based on the number of states they have.
+SELECT Country_ID,
+       COUNT(State_ID) AS state_count,
+       DENSE_RANK() OVER (ORDER BY COUNT(State_ID) DESC) AS rnk
+FROM States
+GROUP BY Country_ID;
 
+
+)
 
 ---15.Use DENSE_RANK to rank cities by population within each state.
-
+SELECT City_ID, State_ID, Population,
+DENSE_RANK() OVER (
+    PARTITION BY State_ID
+    ORDER BY Population DESC
+) AS rnk
+FROM Cities;
+==========================================================================================
