@@ -114,3 +114,19 @@ DENSE_RANK() OVER (
 ) AS rnk
 FROM Cities;
 ==========================================================================================
+---DISTINCT
+---16.Retrieve distinct regions from the Countries table.
+select distinct Region  from Countries;
+
+---17. Find distinct state names that belong to countries in the 'South Asia' region.
+select distinct Country_ID,Country_Name from Countries where Region = 'South Asia' ;
+
+---18.Retrieve distinct city names along with their populations.
+select distinct City_Name, Population from Cities;
+
+=--19.Display all distinct Country_ID values present in the States table.
+SELECT DISTINCT Country_ID FROM States;
+
+---20. Find distinct combinations of State_ID and City_Name.
+select distinct City_Name,State_ID from Cities;
+
