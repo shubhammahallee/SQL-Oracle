@@ -130,3 +130,30 @@ SELECT DISTINCT Country_ID FROM States;
 ---20. Find distinct combinations of State_ID and City_Name.
 select distinct City_Name,State_ID from Cities;
 
+---26. Find the total population of all cities.
+SELECT sum(Population) from Cities;
+
+---27.Calculate the average population of cities grouped by State_ID.
+SELECT State_ID,avg(Population) from Cities group by State_ID;
+
+---28. Find the maximum population for each country.
+SELECT c.Country_Name,
+       MAX(ci.Population) AS max_population
+FROM Countries c
+JOIN States s ON c.Country_ID = s.Country_ID
+JOIN Cities ci ON s.State_ID = ci.State_ID
+GROUP BY c.Country_Name;
+
+---29.Retrieve the minimum population for cities in states that belong to 'India'.
+SELECT c.Country_Name,
+min(ci.Population) AS min_population
+FROM Countries c
+JOIN States s ON c.Country_ID = s.Country_ID
+JOIN Cities ci ON s.State_ID = ci.State_ID
+where c.Country_Name = 'India'
+GROUP BY c.Country_Name; 
+
+---30.Count the number of cities not linked to any state.
+SELECT COUNT(*) AS city_count
+FROM Cities
+WHERE State_ID IS NULL;
