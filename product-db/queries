@@ -133,3 +133,5 @@ SELECT * FROM product ORDER by  Manufacturer asc, Price desc;
 
 ---40.Retrieve all products and sort by SellerName, Manufacturer, and Price.
 SELECT * FROM product ORDER by SellerName, Manufacturer, Price;
+
+
