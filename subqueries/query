@@ -80,7 +80,7 @@ WHERE CUSTOMER_ID IN (
     WHERE Order_Date < TO_DATE('15-01-2024','DD-MM-YYYY')
     group by CUSTOMER_NAME,CUSTOMER_ID,Order_Date
 );
-===================================================================================================
+=================================================================================================== 
 
 ---Correlated Subqueries
 ---Retrieve customers who have placed at least one order with an amount greater than their total purchase.
