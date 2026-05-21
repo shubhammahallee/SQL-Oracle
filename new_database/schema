@@ -15,3 +15,15 @@ CREATE TABLE PornHub (
         REFERENCES PornHub(pornStarID)
 );
 
+CREATE TABLE categories (
+    pornStarWorkID INT PRIMARY KEY,
+    pornCategory VARCHAR2(100) NOT NULL,
+    pornVideosAvailable VARCHAR2(100) NOT NULL,
+    pornType VARCHAR2(100) NOT NULL,
+    videoTime INT,
+    rating INT,
+    
+    CONSTRAINT fk_category
+    FOREIGN KEY (pornStarWorkID)
+    REFERENCES PornHub(pornStarID)
+);
