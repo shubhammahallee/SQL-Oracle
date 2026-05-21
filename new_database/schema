@@ -40,5 +40,12 @@ CREATE TABLE personalDetails (
     totalNetWorth NUMBER(12,2)
 );
 
-
+CREATE TABLE DeepDetails (
+    pornStarID NUMBER PRIMARY KEY,
+    pussytype VARCHAR2(500) NOT NULL,
+    pussycolor VARCHAR2(500) NOT NULL,
+    nipplesize VARCHAR2(500) NOT NULL,
+    nipplecolor VARCHAR2(500) NOT NULL,
+    assholecolor VARCHAR2(500) NOT NULL
+);
 
