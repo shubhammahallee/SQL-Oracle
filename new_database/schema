@@ -1,1 +1,17 @@
+CREATE TABLE PornHub (
+    pornStarID NUMBER PRIMARY KEY,
+    pornStarName VARCHAR2(50) NOT NULL,
+    pornStarAge NUMBER CHECK (pornStarAge > 18),
+    pornStarBirthPlace VARCHAR2(100) NOT NULL,
+    pornStarBoobSize VARCHAR2(10) NOT NULL,
+    pornStarWaistSize VARCHAR2(10) NOT NULL,
+    pornStarHipSize VARCHAR2(10) NOT NULL,
+    pornStarHeight VARCHAR2(10) NOT NULL,
+    pornStarWeight VARCHAR2(10) NOT NULL,
+    pornStarNationality VARCHAR2(50) NOT NULL,
+    pornStarWorkID NUMBER,
+    CONSTRAINT fk_work
+        FOREIGN KEY (pornStarWorkID)
+        REFERENCES PornHub(pornStarID)
+);
 
