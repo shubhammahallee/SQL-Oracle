@@ -27,3 +27,18 @@ CREATE TABLE categories (
     FOREIGN KEY (pornStarWorkID)
     REFERENCES PornHub(pornStarID)
 );
+
+
+CREATE TABLE personalDetails (
+    pornStarWorkID INT PRIMARY KEY,
+    DOJ DATE,
+    salary NUMBER(10,2),
+    totalVideos INT,
+    perVideoCharge INT,
+    currentAge INT,
+    ageAtJoiningTime INT,
+    totalNetWorth NUMBER(12,2)
+);
+
+
+
