@@ -18,3 +18,27 @@ INSERT INTO PornHub VALUES (17, 'Grace Hill', 26, 'Canada', '34B', '27', '36', '
 INSERT INTO PornHub VALUES (18, 'Ella Brown', 29, 'Germany', '36D', '30', '42', '5.7ft', '67kg', 'German', 9);
 INSERT INTO PornHub VALUES (19, 'Lily Adams', 25, 'France', '33B', '26', '36', '5.4ft', '56kg', 'French', 9);
 INSERT INTO PornHub VALUES (20, 'Sofia Martinez', 27, 'Spain', '34C', '28', '38', '5.6ft', '61kg', 'Spanish', 10);
+
+
+
+
+INSERT INTO categories VALUES (1, 'Romance', '150 Videos', 'HD', 25, 4);
+INSERT INTO categories VALUES (2, 'Action', '200 Videos', '4K', 40, 5);
+INSERT INTO categories VALUES (3, 'Drama', '120 Videos', 'HD', 35, 4);
+INSERT INTO categories VALUES (4, 'Comedy', '180 Videos', 'Full HD', 20, 3);
+INSERT INTO categories VALUES (5, 'Fantasy', '90 Videos', '4K', 50, 5);
+INSERT INTO categories VALUES (6, 'Thriller', '140 Videos', 'HD', 45, 4);
+INSERT INTO categories VALUES (7, 'Adventure', '160 Videos', 'Full HD', 60, 5);
+INSERT INTO categories VALUES (8, 'Dance', '110 Videos', 'HD', 15, 3);
+INSERT INTO categories VALUES (9, 'Music', '175 Videos', '4K', 30, 4);
+INSERT INTO categories VALUES (10, 'Documentary', '80 Videos', 'HD', 55, 5);
+INSERT INTO categories VALUES (11, 'Romance', '130 Videos', 'Full HD', 28, 4);
+INSERT INTO categories VALUES (12, 'Comedy', '210 Videos', 'HD', 18, 3);
+INSERT INTO categories VALUES (13, 'Action', '250 Videos', '4K', 42, 5);
+INSERT INTO categories VALUES (14, 'Fantasy', '95 Videos', 'HD', 48, 4);
+INSERT INTO categories VALUES (15, 'Adventure', '145 Videos', 'Full HD', 58, 5);
+INSERT INTO categories VALUES (16, 'Drama', '125 Videos', 'HD', 33, 4);
+INSERT INTO categories VALUES (17, 'Music', '190 Videos', '4K', 22, 5);
+INSERT INTO categories VALUES (18, 'Thriller', '135 Videos', 'Full HD', 47, 4);
+INSERT INTO categories VALUES (19, 'Dance', '100 Videos', 'HD', 17, 3);
+INSERT INTO categories VALUES (20, 'Documentary', '70 Videos', '4K', 65, 5);
