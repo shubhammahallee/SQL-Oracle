@@ -64,3 +64,25 @@ INSERT INTO personalDetails VALUES (17, TO_DATE('07-09-2016','DD-MM-YYYY'), 7400
 INSERT INTO personalDetails VALUES (18, TO_DATE('13-02-2014','DD-MM-YYYY'), 95000.00, 390, 950, 29, 18, 790000.00);
 INSERT INTO personalDetails VALUES (19, TO_DATE('26-11-2021','DD-MM-YYYY'), 43000.00, 70, 400, 25, 24, 130000.00);
 INSERT INTO personalDetails VALUES (20, TO_DATE('08-08-2017','DD-MM-YYYY'), 69000.00, 205, 690, 27, 18, 410000.00);
+
+
+INSERT INTO DeepDetails VALUES (1, 'Tight and shaved', 'Pink', 'Medium', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (2, 'Puffy and trimmed', 'Light pink', 'Large', 'Brown', 'Brown');
+INSERT INTO DeepDetails VALUES (3, 'Innie and smooth', 'Pink', 'Small', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (4, 'Outie and groomed', 'Rose', 'Medium', 'Dark pink', 'Brown');
+INSERT INTO DeepDetails VALUES (5, 'Tight and bald', 'Bright pink', 'Small', 'Light pink', 'Pink');
+INSERT INTO DeepDetails VALUES (6, 'Full lips and shaved', 'Coral pink', 'Large', 'Brown', 'Dark pink');
+INSERT INTO DeepDetails VALUES (7, 'Puffy innie', 'Deep pink', 'Medium', 'Pink', 'Brown');
+INSERT INTO DeepDetails VALUES (8, 'Small and tight', 'Light pink', 'Small', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (9, 'Shaved and neat', 'Tan pink', 'Medium', 'Dark', 'Brown');
+INSERT INTO DeepDetails VALUES (10, 'Petite and smooth', 'Pink', 'Small', 'Light pink', 'Pink');
+INSERT INTO DeepDetails VALUES (11, 'Voluptuous and trimmed', 'Rose', 'Large', 'Brown', 'Dark brown');
+INSERT INTO DeepDetails VALUES (12, 'Tight and bald', 'Bright pink', 'Medium', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (13, 'Full and groomed', 'Coral', 'Large', 'Dark pink', 'Brown');
+INSERT INTO DeepDetails VALUES (14, 'Puffy outie', 'Light brown', 'Medium', 'Brown', 'Dark');
+INSERT INTO DeepDetails VALUES (15, 'Small innie', 'Pink', 'Small', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (16, 'Shaved and tight', 'Rose pink', 'Medium', 'Pink', 'Brown');
+INSERT INTO DeepDetails VALUES (17, 'Neat and trimmed', 'Light pink', 'Small', 'Pink', 'Pink');
+INSERT INTO DeepDetails VALUES (18, 'Voluptuous', 'Deep rose', 'Large', 'Dark brown', 'Brown');
+INSERT INTO DeepDetails VALUES (19, 'Petite and smooth', 'Bright pink', 'Small', 'Light pink', 'Pink');
+INSERT INTO DeepDetails VALUES (20, 'Full lips and shaved', 'Coral pink', 'Medium', 'Pink', 'Dark pink');
