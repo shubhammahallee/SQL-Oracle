@@ -6,7 +6,7 @@ INSERT INTO Stars VALUES (4, 'Nina Fox', 29, 'Germany', '34C', '28', '37', '5.7f
 INSERT INTO Stars VALUES (5, 'Sara Miles', 24, 'France', '33B', '26', '36', '5.5ft', '57kg', 'French', 2);
 INSERT INTO Stars VALUES (6, 'Emma Stonefield', 26, 'USA', '35C', '27', '39', '5.8ft', '64kg', 'American', 3);
 INSERT INTO Stars VALUES (7, 'Olivia Hart', 30, 'Australia', '36D', '29', '40', '5.6ft', '66kg', 'Australian', 3);
-INSERT INTO Stars VALUES (8, 'Ava Green', 22, 'India', '32A', '24', '34', '5.3ft', '52kg', 'Indian', 4);
+INSERT INTO Stars VALUES (8, 'Ava Green', 22, 'India', '32A', '24', '34', '5.3ft', '52kg', 'Indian', 4); 
 INSERT INTO Stars VALUES (9, 'Zara Khan', 28, 'UAE', '34B', '27', '36', '5.6ft', '60kg', 'Emirati', 4);
 INSERT INTO Stars VALUES (10, 'Sophia Lee', 25, 'South Korea', '32B', '25', '35', '5.4ft', '54kg', 'Korean', 5);
 INSERT INTO Stars VALUES (11, 'Emily Rose', 31, 'USA', '36C', '30', '41', '5.7ft', '68kg', 'American', 5);
