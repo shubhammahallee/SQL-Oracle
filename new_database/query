@@ -12,3 +12,15 @@ WHERE dd.pussycolor = 'Pink'
   AND dd.nipplecolor = 'Pink';
 
 
+---Write a query to show pornStarName, totalVideos, perVideoCharge, and calculate estimated total earnings (totalVideos * perVideoCharge). Show only those whose estimated earnings are greater than their totalNetWorth.
+SELECT 
+    ph.pornStarName,
+    pd.totalVideos,
+    pd.perVideoCharge,
+    (pd.totalVideos * pd.perVideoCharge) AS estimated_total_earnings,
+    pd.totalNetWorth
+FROM PornHub ph
+JOIN personalDetails pd 
+    ON ph.pornStarID = pd.pornStarWorkID
+WHERE (pd.totalVideos * pd.perVideoCharge) > pd.totalNetWorth
+ORDER BY estimated_total_earnings DESC;
