@@ -64,3 +64,23 @@ SET pornCategory =
         WHEN pornStarWorkID = 20 THEN 'Mature'
         ELSE pornCategory
     END;
+
+---pornStarName pornCategory salary totalNetWorth pussytype nipplesize Rank the stars by totalNetWorth in descending order.
+SELECT
+    ph.pornStarName,
+    c.pornCategory,
+    pd.salary,
+    pd.totalNetWorth,
+    dd.pussytype,
+    dd.nipplesize,
+    
+    RANK() OVER (
+        ORDER BY pd.totalNetWorth DESC
+    ) AS rn
+FROM PornHub ph
+JOIN personalDetails pd
+    ON ph.pornStarID = pd.pornStarWorkID
+JOIN categories c
+    ON c.pornStarWorkID = ph.pornStarID
+JOIN DeepDetails dd
+    ON dd.pornStarID = ph.pornStarID;
