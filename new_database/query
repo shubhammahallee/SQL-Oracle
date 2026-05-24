@@ -24,3 +24,15 @@ JOIN personalDetails pd
     ON ph.pornStarID = pd.pornStarWorkID
 WHERE (pd.totalVideos * pd.perVideoCharge) > pd.totalNetWorth
 ORDER BY estimated_total_earnings DESC;
+
+
+---Find the highest rated category (rating = 5) and list all stars working in those categories with their pornStarBoobSize and pornStarHeight.
+SELECT 
+    ph.pornStarName,
+    c.rating,
+    ph.pornStarHeight,
+    ph.pornStarBoobSize
+FROM PornHub ph
+JOIN categories c
+ON c.pornStarWorkID = ph.pornStarWorkID
+where c.rating = 5;
