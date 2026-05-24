@@ -36,3 +36,31 @@ FROM PornHub ph
 JOIN categories c
 ON c.pornStarWorkID = ph.pornStarWorkID
 where c.rating = 5;
+
+
+
+UPDATE categories
+SET pornCategory =
+    CASE
+        WHEN pornStarWorkID = 1 THEN 'BDSM'
+        WHEN pornStarWorkID = 2 THEN 'Hardcore'
+        WHEN pornStarWorkID = 3 THEN 'Rough'
+        WHEN pornStarWorkID = 4 THEN 'MILF'
+        WHEN pornStarWorkID = 5 THEN 'Roleplay'
+        WHEN pornStarWorkID = 6 THEN 'Fetish'
+        WHEN pornStarWorkID = 7 THEN 'Cosplay'
+        WHEN pornStarWorkID = 8 THEN 'Softcore'
+        WHEN pornStarWorkID = 9 THEN 'Amateur'
+        WHEN pornStarWorkID = 10 THEN 'Lesbian'
+        WHEN pornStarWorkID = 11 THEN 'Gangbang'
+        WHEN pornStarWorkID = 12 THEN 'POV'
+        WHEN pornStarWorkID = 13 THEN 'Anal'
+        WHEN pornStarWorkID = 14 THEN 'Threesome'
+        WHEN pornStarWorkID = 15 THEN 'Interracial'
+        WHEN pornStarWorkID = 16 THEN 'Casting'
+        WHEN pornStarWorkID = 17 THEN 'Outdoor'
+        WHEN pornStarWorkID = 18 THEN 'Parody'
+        WHEN pornStarWorkID = 19 THEN 'Massage'
+        WHEN pornStarWorkID = 20 THEN 'Mature'
+        ELSE pornCategory
+    END;
