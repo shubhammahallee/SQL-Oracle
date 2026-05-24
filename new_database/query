@@ -8,7 +8,7 @@ SELECT
 FROM PornHub ph
 JOIN DeepDetails dd ON dd.pornStarID = ph.pornStarID
 JOIN categories c ON c.pornStarWorkID = ph.pornStarWorkID   
-WHERE dd.pussycolor = 'Pink' 
+WHERE dd.pussycolor = 'Pink'  
   AND dd.nipplecolor = 'Pink';
 
 
