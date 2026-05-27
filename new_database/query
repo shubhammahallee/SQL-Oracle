@@ -82,5 +82,13 @@ JOIN personalDetails pd
     ON ph.pornStarID = pd.pornStarWorkID
 JOIN categories c
     ON c.pornStarWorkID = ph.pornStarID
+
+---Write a query to find the most popular nationality (highest count of porn stars) and show the average rating of videos from that nationality.
+select ph.pornstarnationality,count(ph.pornstarnationality) as total_count,
+       avg(c.rating) as avg_rating
+from pornhub ph JOIN categories c
+    ON c.pornStarWorkID = ph.pornStarID
+group by ph.pornstarnationality;
+
 JOIN DeepDetails dd
     ON dd.pornStarID = ph.pornStarID;
