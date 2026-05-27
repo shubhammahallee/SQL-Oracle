@@ -126,3 +126,13 @@ JOIN categories c
     ON c.pornStarWorkID = ph.pornStarID
 WHERE pd.totalVideos < 100
 AND c.rating < 4;
+
+
+---Find the average age of porn stars grouped by their pornStarNationality. Show only nationalities with more than 2 stars.
+select ph.pornStarNationality,
+      avg(pd.currentage) as avg_age,
+      count(ph.pornStarNationality) as count
+FROM PornHub ph
+JOIN personalDetails pd
+    ON ph.pornStarID = pd.pornStarWorkID
+GROUP by ph.pornStarNationality;
