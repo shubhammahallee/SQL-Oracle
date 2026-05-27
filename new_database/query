@@ -102,3 +102,13 @@ JOIN DeepDetails dd
 where nipplesize = 'large' AND porntype = '4k';
 JOIN DeepDetails dd
     ON dd.pornStarID = ph.pornStarID;
+
+
+---Update the salary of all stars by 10% whose rating is 5.
+UPDATE personalDetails pd
+SET pd.salary = pd.salary + (pd.salary * 0.10)
+WHERE pd.pornStarWorkID IN (
+    SELECT c.pornStarWorkID
+    FROM categories c
+    WHERE c.rating = 5
+);
