@@ -90,5 +90,15 @@ from pornhub ph JOIN categories c
     ON c.pornStarWorkID = ph.pornStarID
 group by ph.pornstarnationality;
 
+---Find all stars who have 'Large' nipplesize and are working in '4K' video quality. Show their name, age, and salary.
+select ph.pornstarname,c.porntype,pd.currentage,dd.nipplesize,pd.salary 
+FROM PornHub ph
+JOIN personalDetails pd
+    ON ph.pornStarID = pd.pornStarWorkID
+JOIN categories c
+    ON c.pornStarWorkID = ph.pornStarID
+JOIN DeepDetails dd
+    ON dd.pornStarID = ph.pornStarID
+where nipplesize = 'large' AND porntype = '4k';
 JOIN DeepDetails dd
     ON dd.pornStarID = ph.pornStarID;
