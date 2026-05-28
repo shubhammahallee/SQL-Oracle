@@ -101,7 +101,7 @@ JOIN DeepDetails dd
     ON dd.pornStarID = ph.pornStarID
 where nipplesize = 'large' AND porntype = '4k';
 JOIN DeepDetails dd
-    ON dd.pornStarID = ph.pornStarID;
+    ON dd.pornStarID = ph.pornStarID;  
 
 
 ---Update the salary of all stars by 10% whose rating is 5.
