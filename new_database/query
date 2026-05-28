@@ -6,7 +6,7 @@ SELECT
     c.pornCategory, 
     c.rating
 FROM PornHub ph
-JOIN DeepDetails dd ON dd.pornStarID = ph.pornStarID
+JOIN DeepDetails dd ON dd.pornStarID = ph.pornStarID 
 JOIN categories c ON c.pornStarWorkID = ph.pornStarWorkID   
 WHERE dd.pussycolor = 'Pink'  
   AND dd.nipplecolor = 'Pink';
