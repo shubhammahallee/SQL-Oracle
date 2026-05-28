@@ -9,7 +9,7 @@ FROM PornHub ph
 JOIN DeepDetails dd ON dd.pornStarID = ph.pornStarID 
 JOIN categories c ON c.pornStarWorkID = ph.pornStarWorkID   
 WHERE dd.pussycolor = 'Pink'  
-  AND dd.nipplecolor = 'Pink';
+  AND dd.nipplecolor = 'Pink';  
 
 
 ---Write a query to show pornStarName, totalVideos, perVideoCharge, and calculate estimated total earnings (totalVideos * perVideoCharge). Show only those whose estimated earnings are greater than their totalNetWorth.
