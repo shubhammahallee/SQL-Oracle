@@ -42,3 +42,10 @@ INSERT ALL
     INTO Credence_Employees VALUES (29,'Riya','Agarwal','riya.agarwal@credence.in',DATE '2023-05-20',96000,'IT','9876543238')
     INTO Credence_Employees VALUES (30,'Nitin','Chatterjee','nitin.chatterjee@credence.in',DATE '2023-05-20',97000,'HR','9876543239')
 SELECT * FROM dual;
+
+---1. Write a query to add 1000 to the salary of all employees and display their new salary.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Salary + 100 AS Increment_Salary
+FROM Credence_Employees;
