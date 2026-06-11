@@ -56,3 +56,10 @@ SELECT Emp_ID,
        Salary,
        Salary - 100 AS decrement_Salary
 FROM Credence_Employees;
+
+---3. Multiply the salary of all employees by 1.5 and display the updated values.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Salary * 1.5 AS Increment_Salary
+FROM Credence_Employees;
