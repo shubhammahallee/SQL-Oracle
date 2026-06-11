@@ -70,3 +70,11 @@ SELECT Emp_ID,
        Salary,
        Salary / 2 AS Increment_Salary
 FROM Credence_Employees;
+
+---5. Calculate the annual salary of all employees (assuming monthly salary is stored in the table).
+SELECT Emp_ID,
+       First_Name,
+       Last_Name,
+       Salary AS Monthly_Salary,
+       Salary * 12 AS Annual_Salary
+FROM Credence_Employees;
