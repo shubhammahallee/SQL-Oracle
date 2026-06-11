@@ -9,3 +9,36 @@ CREATE TABLE Credence_Employees
     Department VARCHAR(50) NOT NULL,
     Phone_Number VARCHAR(15) UNIQUE
 );
+
+INSERT ALL
+    INTO Credence_Employees VALUES (1,'Aarav','Sharma','aarav.sharma@credence.in',DATE '2023-01-01',50000,'IT','9876545987654')
+    INTO Credence_Employees VALUES (2,'Vihaan','Patel','vihaan.patel@credence.in',DATE '2023-01-02',52000,'Finance','9876543211')
+    INTO Credence_Employees VALUES (3,'Ananya','Mehta','ananya.mehta@credence.in',DATE '2023-01-03',54000,'HR','9876543212')
+    INTO Credence_Employees VALUES (4,'Ishaan','Gupta','ishaan.gupta@credence.in',DATE '2023-01-04',55000,'IT','9876543213')
+    INTO Credence_Employees VALUES (5,'Diya','Chopra','diya.chopra@credence.in',DATE '2023-01-05',57000,'Marketing','9876543214')
+    INTO Credence_Employees VALUES (6,'Arjun','Reddy','arjun.reddy@credence.in',DATE '2023-01-06',60000,'Sales','9876543215')
+    INTO Credence_Employees VALUES (7,'Kavya','Iyer','kavya.iyer@credence.in',DATE '2023-01-07',62000,'Finance','9876543216')
+    INTO Credence_Employees VALUES (8,'Rohan','Kulkarni','rohan.kulkarni@credence.in',DATE '2023-01-08',64000,'HR','9876543217')
+    INTO Credence_Employees VALUES (9,'Aditi','Das','aditi.das@credence.in',DATE '2023-01-09',65000,'IT','9876543218')
+    INTO Credence_Employees VALUES (10,'Vivaan','Bhat','vivaan.bhat@credence.in',DATE '2023-01-10',67000,'Finance','9876543219')
+    INTO Credence_Employees VALUES (11,'Sanya','Jain','sanya.jain@credence.in',DATE '2023-01-11',70000,'Marketing','9876543220')
+    INTO Credence_Employees VALUES (12,'Dev','Singh','dev.singh@credence.in',DATE '2023-01-12',75000,'HR','9876543221')
+    INTO Credence_Employees VALUES (13,'Aryan','Malhotra','aryan.malhotra@credence.in',DATE '2023-01-15',76000,'Sales','9876543222')
+    INTO Credence_Employees VALUES (14,'Nisha','Rao','nisha.rao@credence.in',DATE '2023-02-15',77000,'IT','9876543223')
+    INTO Credence_Employees VALUES (15,'Karan','Nair','karan.nair@credence.in',DATE '2023-03-15',78000,'Finance','9876543224')
+    INTO Credence_Employees VALUES (16,'Meera','Singh','meera.singh@credence.in',DATE '2023-04-15',79000,'HR','9876543225')
+    INTO Credence_Employees VALUES (17,'Raj','Verma','raj.verma@credence.in',DATE '2023-05-15',80000,'Sales','9876543226')
+    INTO Credence_Employees VALUES (18,'Ira','Kumar','ira.kumar@credence.in',DATE '2023-06-15',82000,'IT','9876543227')
+    INTO Credence_Employees VALUES (19,'Kabir','Shukla','kabir.shukla@credence.in',DATE '2023-07-15',84000,'Finance','9876543228')
+    INTO Credence_Employees VALUES (20,'Leela','Sinha','leela.sinha@credence.in',DATE '2023-08-15',86000,'HR','9876543229')
+    INTO Credence_Employees VALUES (21,'Ravi','Tripathi','ravi.tripathi@credence.in',DATE '2023-09-15',87000,'Marketing','9876543230')
+    INTO Credence_Employees VALUES (22,'Anika','Yadav','anika.yadav@credence.in',DATE '2023-09-15',96000,'IT','9876543231')
+    INTO Credence_Employees VALUES (23,'Rohit','Basu','rohit.basu@credence.in',DATE '2023-09-15',90000,'Finance','9876543232')
+    INTO Credence_Employees VALUES (24,'Sneha','Sen','sneha.sen@credence.in',DATE '2023-09-15',91000,'Sales','9876543233')
+    INTO Credence_Employees VALUES (25,'Abhay','Roy','abhay.roy@credence.in',DATE '2023-09-15',96000,'HR','9876543234')
+    INTO Credence_Employees VALUES (26,'Neha','Kapoor','neha.kapoor@credence.in',DATE '2023-09-15',93000,'Finance','9876543235')
+    INTO Credence_Employees VALUES (27,'Aman','Dutta','aman.dutta@credence.in',DATE '2023-03-20',94000,'Marketing','9876543236')
+    INTO Credence_Employees VALUES (28,'Tanya','Ghosh','tanya.ghosh@credence.in',DATE '2023-04-20',95000,'Marketing','9876543237')
+    INTO Credence_Employees VALUES (29,'Riya','Agarwal','riya.agarwal@credence.in',DATE '2023-05-20',96000,'IT','9876543238')
+    INTO Credence_Employees VALUES (30,'Nitin','Chatterjee','nitin.chatterjee@credence.in',DATE '2023-05-20',97000,'HR','9876543239')
+SELECT * FROM dual;
