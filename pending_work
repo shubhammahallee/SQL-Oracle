@@ -78,3 +78,8 @@ SELECT Emp_ID,
        Salary AS Monthly_Salary,
        Salary * 12 AS Annual_Salary
 FROM Credence_Employees;
+
+
+---Subqueries with Operators
+---6. Retrieve customers whose age is greater than the average age of all customers.
+select * from customers where age > (select avg(age) from customers);
