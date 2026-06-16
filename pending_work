@@ -94,4 +94,13 @@ GROUP BY Customer_ID
 
 ---9. Retrieve orders placed by customers from 'New York'.
 select * from customers where city = 'New York';
+
+---10.Find orders placed in the last 30 days using a subquery.
+SELECT *
+FROM Orders
+WHERE Order_Date >=
+(
+    SELECT SYSDATE - 30
+    FROM DUAL
+);
 HAVING COUNT(*) > 1;
