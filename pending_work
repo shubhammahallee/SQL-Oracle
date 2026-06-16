@@ -91,4 +91,7 @@ select * from orders where order_amount > (select avg( order_amount) from orders
 SELECT Customer_ID
 FROM Orders
 GROUP BY Customer_ID
+
+---9. Retrieve orders placed by customers from 'New York'.
+select * from customers where city = 'New York';
 HAVING COUNT(*) > 1;
