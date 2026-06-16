@@ -86,3 +86,9 @@ select * from customers where age > (select avg(age) from customers);
 
 ---7. Find orders where the amount is greater than the average order amount.
 select * from orders where order_amount > (select avg( order_amount) from orders);
+
+---8. Get customers who have placed more than one order.
+SELECT Customer_ID
+FROM Orders
+GROUP BY Customer_ID
+HAVING COUNT(*) > 1;
