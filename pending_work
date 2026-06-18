@@ -104,3 +104,11 @@ WHERE Order_Date >=
     FROM DUAL
 );
 HAVING COUNT(*) > 1;
+
+---11.Retrieve employees who are working in the 'HR' department and have a salary greater than 60,000.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department
+FROM Credence_Employees
+WHERE Department = 'HR' AND salary > 60000;
