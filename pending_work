@@ -153,3 +153,11 @@ SELECT Emp_ID,
        Department
 FROM Credence_Employees
 WHERE Department NOT IN ('HR') AND salary < 50000;
+
+---17.Display employees who are not in the 'Finance' department and have a first name starting with 'A'.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department
+FROM Credence_Employees
+WHERE Department NOT IN ('Finance') AND First_Name LIKE '%A';
