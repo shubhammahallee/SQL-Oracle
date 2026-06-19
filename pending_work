@@ -112,3 +112,11 @@ SELECT Emp_ID,
        Department
 FROM Credence_Employees
 WHERE Department = 'HR' AND salary > 60000;
+
+---12.Display employees who are in the 'Finance' department or have a salary less than 50,000.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department
+FROM Credence_Employees
+WHERE Department = 'Finance' AND salary > 50000;
