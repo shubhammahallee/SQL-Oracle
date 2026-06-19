@@ -128,3 +128,12 @@ SELECT Emp_ID,
        Department
 FROM Credence_Employees
 WHERE  Department NOT IN 'Marketing';
+
+---14.Retrieve employees whose salary is greater than 70,000 and who joined after '2023-01-01'.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department,
+       Hire_Date
+FROM Credence_Employees
+WHERE Hire_Date > DATE '2023-01-01' AND salary > 70000;
