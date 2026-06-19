@@ -161,3 +161,11 @@ SELECT Emp_ID,
        Department
 FROM Credence_Employees
 WHERE Department NOT IN ('Finance') AND First_Name LIKE '%A';
+
+---18. Find employees whose salary is greater than 60,000 and less than 80,000.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department
+FROM Credence_Employees
+WHERE salary between 60000 and 80000;
