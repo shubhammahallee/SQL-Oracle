@@ -145,3 +145,11 @@ SELECT Emp_ID,
        Department
 FROM Credence_Employees
 WHERE  Department = 'Sales' OR Department = 'IT';
+
+---16.Retrieve employees whose department is not 'HR' and whose salary is not less than 50,000.
+SELECT Emp_ID,
+       First_Name,
+       Salary,
+       Department
+FROM Credence_Employees
+WHERE Department NOT IN ('HR') AND salary < 50000;
