@@ -28,3 +28,7 @@ WHERE p.amount > (SELECT AVG(amount) FROM payments);
 ----User name with payment amount---
 select u.full_name,p.amount from users u
 join payments p ON u.user_id = p.user_id;
+
+---User-wise total amount spent---
+select u.full_name,p.amount from users u
+join payments p ON u.user_id = p.user_id;
