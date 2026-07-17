@@ -11,3 +11,10 @@ JOIN (
         WHERE status = 'FAILED'
      ) t
   ON p.payment_id = t.payment_id;
+
+SELECT u.full_name, p.amount, t.status
+FROM users u
+JOIN payments p ON u.user_id = p.user_id
+JOIN transactions t ON p.payment_id = t.payment_id
+WHERE t.status = 'FAILED';
+
