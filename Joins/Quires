@@ -1,1 +1,13 @@
-
+----Users who never made a payment---
+SELECT u.full_name,
+       p.amount,
+       t.status
+FROM users u
+JOIN payments p
+  ON u.user_id = p.user_id
+JOIN (
+        SELECT *
+        FROM transactions
+        WHERE status = 'FAILED'
+     ) t
+  ON p.payment_id = t.payment_id;
