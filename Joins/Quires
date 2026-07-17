@@ -32,3 +32,12 @@ join payments p ON u.user_id = p.user_id;
 ---User-wise total amount spent---
 select u.full_name,p.amount from users u
 join payments p ON u.user_id = p.user_id;
+
+----Merchant-wise transaction count
+SELECT m.merchant_id,
+       m.merchant_name,
+       COUNT(p.payment_id) AS txn_count
+FROM merchants m
+JOIN payments p
+  ON m.merchant_id = p.merchant_id
+GROUP BY m.merchant_id, m.merchant_name;
