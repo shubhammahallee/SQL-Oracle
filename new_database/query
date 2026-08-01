@@ -1,6 +1,6 @@
 ---Find the porn stars who have 'Pink' as pussycolor and nipplecolor (using DeepDetails table). Also show their pornStarName, pornCategory, and rating.
 SELECT 
-    dd.pussycolor,
+    dd.pussycolor, 
     dd.nipplecolor,
     ph.pornStarName,
     c.pornCategory,  
