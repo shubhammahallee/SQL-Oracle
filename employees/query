@@ -1,6 +1,6 @@
 
 -- All employees
-SELECT * FROM employees;
+SELECT * FROM employees; 
 
 --- Part 1: Arithmetic Operators
 ---1. Write a query to add 1000 to the salary of all employees and display their new salary.
