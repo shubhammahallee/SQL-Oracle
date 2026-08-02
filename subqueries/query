@@ -1,7 +1,7 @@
 select * from Customers;
 select * from Orders;
 
----Basic Subqueries
+---Basic Subqueriess
 ---1.Retrieve all customers who have placed an order.
 SELECT * FROM customers WHERE customer_id IN ( SELECT customer_id FROM orders); 
 
