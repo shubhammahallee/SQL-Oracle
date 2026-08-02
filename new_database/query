@@ -136,3 +136,4 @@ FROM PornHub ph
 JOIN personalDetails pd
     ON ph.pornStarID = pd.pornStarWorkID
 GROUP by ph.pornStarNationality;
+
