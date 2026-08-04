@@ -8,7 +8,7 @@ JOIN payments p
 JOIN (
         SELECT *
         FROM transactions
-        WHERE status = 'FAILED'
+        WHERE status = 'FAILED' 
      ) t
   ON p.payment_id = t.payment_id;
 
