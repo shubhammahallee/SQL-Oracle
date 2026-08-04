@@ -1,4 +1,4 @@
-----Users who never made a payment---
+----Users who never made a payment--- 
 SELECT u.full_name,
        p.amount,
        t.status
