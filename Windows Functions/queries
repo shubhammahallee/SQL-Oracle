@@ -1,5 +1,5 @@
 ---Assignment Questions 
----ROWID
+---ROWID 
 ---1. Retrieve the ROWID for all rows in the Countries table.
 select ROWID from Countries;
 
