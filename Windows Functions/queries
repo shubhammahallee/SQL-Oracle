@@ -29,7 +29,7 @@ WHERE rn <= 3;
 
 ---7. Find the second and third most populous cities using ROWNUM.
 SELECT * FROM (
-    SELECT city_name, population, ROWNUM AS rn
+    SELECT city_name, population, ROWNUM AS rn 
     FROM (
         SELECT city_name, population
         FROM Cities
