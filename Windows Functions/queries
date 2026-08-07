@@ -71,7 +71,7 @@ SELECT * FROM (
            ROW_NUMBER() OVER (ORDER BY State_Name ASC) AS rn
     FROM States s
 )
-WHERE rn <= 5;
+WHERE rn <= 5; 
 =================================================================================================
 
 ---RANK and DENSE_RANK
