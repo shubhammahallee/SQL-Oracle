@@ -2,7 +2,7 @@
 SELECT 
     dd.pussycolor, 
     dd.nipplecolor,
-    ph.pornStarName,
+    ph.pornStarName, 
     c.pornCategory,  
     c.rating
 FROM PornHub ph
