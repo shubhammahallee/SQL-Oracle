@@ -46,7 +46,7 @@ SELECT * FROM (
 )
 WHERE rn IN (2, 3);
 
----8. Display all cities with ROWNUM less than 5 and population greater than 1 million.
+---8. Display all cities with ROWNUM less than 5 and population greater than 1 million. 
 select * from (
     SELECT city_name, population, ROWNUM AS rn FROM (
         SELECT city_name, population
