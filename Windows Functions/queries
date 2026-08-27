@@ -41,7 +41,7 @@ WHERE rn >= 2;
 
 SELECT * FROM (
     SELECT city_name, population,
-           ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn
+           ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn 
     FROM Cities
 )
 WHERE rn IN (2, 3);
