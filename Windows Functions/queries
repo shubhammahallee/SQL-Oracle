@@ -22,7 +22,7 @@ HAVING COUNT(*) > 1;
 ---ROWNUM
 ---6. Retrieve the top 3 rows from the Cities table based on population.
 SELECT * FROM (
-    SELECT c.*, ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn
+    SELECT c.*, ROW_NUMBER() OVER (ORDER BY Population DESC) AS rn 
     FROM Cities c
 )
 WHERE rn <= 3; 
