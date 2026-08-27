@@ -1,6 +1,6 @@
 ---Assignment Questions 
 ---ROWID 
----1. Retrieve the ROWID for all rows in the Countries table.
+---1. Retrieve the ROWID for all rows in the Countries table. 
 select ROWID from Countries;
 
 ---2. Find the ROWID for the row where the Country_Name is 'India'.
