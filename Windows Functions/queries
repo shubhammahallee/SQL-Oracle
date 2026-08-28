@@ -6,7 +6,7 @@ select ROWID from Countries;
 ---2. Find the ROWID for the row where the Country_Name is 'India'.
 select ROWID from Countries WHERE Country_Name ='India';
 
----3. Delete a row from the Cities table using its ROWID.
+---3. Delete a row from the Cities table using its ROWID. 
 DELETE FROM Cities WHERE ROWID = 'AALxHjAABAAMsHPAAA';
 
 ---4. Retrieve all distinct ROWID values for the States table.
