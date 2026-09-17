@@ -10,7 +10,7 @@ JOIN (
         FROM transactions
         WHERE status = 'FAILED' 
      ) t
-  ON p.payment_id = t.payment_id;
+  ON p.payment_id = t.payment_id; 
 
 SELECT u.full_name, p.amount, t.status
 FROM users u
