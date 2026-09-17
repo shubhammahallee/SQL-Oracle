@@ -7,7 +7,7 @@ CREATE TABLE Credence_Employees
     Hire_Date DATE NOT NULL, 
     Salary INT NOT NULL,
     Department VARCHAR(50) NOT NULL, 
-    Phone_Number VARCHAR(15) UNIQUE
+    Phone_Number VARCHAR(15) UNIQUE 
 );
 
 INSERT ALL
