@@ -35,7 +35,7 @@ SELECT
 FROM PornHub ph
 JOIN categories c
 ON c.pornStarWorkID = ph.pornStarWorkID
-where c.rating = 5;
+where c.rating = 5; 
 
 
 
