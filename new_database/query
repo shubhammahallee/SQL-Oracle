@@ -16,7 +16,7 @@ WHERE dd.pussycolor = 'Pink'
 SELECT 
     ph.pornStarName,
     pd.totalVideos,
-    pd.perVideoCharge,
+    pd.perVideoCharge, 
     (pd.totalVideos * pd.perVideoCharge) AS estimated_total_earnings,
     pd.totalNetWorth
 FROM PornHub ph
